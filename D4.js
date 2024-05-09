@@ -5,13 +5,12 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function area(l1, l2) {
-    const rettangolo = l1 * l2
-    return rettangolo
-    
+  const areaRettangolo = l1 * l2;
+  return areaRettangolo;
 }
 
-area(10, 12)
-console.log(area(10,12))
+const risultato = area(10, 12);
+console.log(risultato);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -22,17 +21,18 @@ console.log(area(10,12))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function crazySum(num1, num2) {
-    const somma = num1 + num2
-        if(num1 === num2){
-            return somma*3
-        }else{
-            return somma
-        }
+  const somma = num1 + num2;
+  if (num1 === num2) {
+    return somma * 3;
+  } else {
+    return somma;
+  }
 }
-crazySum(5,10)
-console.log(crazySum(5,10))
-crazySum(5,5)
-console.log(crazySum(5,5))
+const risultato1 = crazySum(5, 10);
+const risultato2 = crazySum(5, 5);
+
+console.log(risultato1);
+console.log(risultato2);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
@@ -42,19 +42,19 @@ console.log(crazySum(5,5))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function crazyDiff(numero) {
-    const differenzaAssoluta = Math.abs(numero - 19)
-        if (numero > 19) {
-            return differenzaAssoluta*3
-        }else{
-            return differenzaAssoluta
-        }
+  const differenzaAssoluta = Math.abs(numero - 19);
+  if (numero > 19) {
+    return differenzaAssoluta * 3;
+  } else {
+    return differenzaAssoluta;
+  }
 }
-crazyDiff(10)
-console.log(crazyDiff(5))
-crazyDiff(20)
-console.log(crazyDiff(20)) // la differenza assoluta, in questo caso è 1, quindi 1*3 = 3
-crazyDiff(39)
-console.log(crazyDiff(39)) // qui la differenza assoluta è 20(39-19), quindi 20*3 = 60
+crazyDiff(10);
+console.log(crazyDiff(5));
+crazyDiff(20);
+console.log(crazyDiff(20)); // la differenza assoluta, in questo caso è 1, quindi 1*3 = 3
+crazyDiff(39);
+console.log(crazyDiff(39)); // qui la differenza assoluta è 20(39-19), quindi 20*3 = 60
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -64,21 +64,18 @@ console.log(crazyDiff(39)) // qui la differenza assoluta è 20(39-19), quindi 20
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function boundary(n) {
-        if (n >= 20 && n <= 100 || n === 400) {
-            return true
-        }else{
-            return false
-        }
-    
+  if ((n >= 20 && n <= 100) || n === 400) {
+    return true;
+  } else {
+    return false;
+  }
 }
-boundary(30)
-console.log(boundary(30))
-boundary(400)
-console.log(boundary(400))
-boundary(450)
-console.log(boundary(450))
-
-
+boundary(30);
+console.log(boundary(30));
+boundary(400);
+console.log(boundary(400));
+boundary(450);
+console.log(boundary(450));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -88,18 +85,18 @@ console.log(boundary(450))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function epify(stringa) { 
-    if (stringa.startsWith("EPICODE")) {
-        return stringa
-    }else{
-        return "EPICODE" + stringa
-    }
+function epify(stringa) {
+  if (stringa.startsWith("EPICODE")) {
+    return stringa;
+  } else {
+    return "EPICODE" + stringa;
+  }
 }
 
-epify("Federico")
-console.log(epify("Federico"))
-epify("EPICODE Giovanni")
-console.log(epify("EPICODE Giovanni"))
+epify("Federico");
+console.log(epify("Federico"));
+epify("EPICODE Giovanni");
+console.log(epify("EPICODE Giovanni"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
@@ -109,20 +106,18 @@ console.log(epify("EPICODE Giovanni"))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function check3and7(numeroPositivo) {
-    if (numeroPositivo %3 === 0 || numeroPositivo %7 ===0){
-        return true
-    }else{
-        return false
-    }
-    
-    
+  if (numeroPositivo % 3 === 0 || numeroPositivo % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
-check3and7(15)
-console.log(check3and7(15))
-check3and7(21)
-console.log(check3and7(21))
-check3and7(43)
-console.log(check3and7(43))
+check3and7(15);
+console.log(check3and7(15));
+check3and7(21);
+console.log(check3and7(21));
+check3and7(43);
+console.log(check3and7(43));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -131,14 +126,12 @@ console.log(check3and7(43))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function reverseString(stringa) {
-    const stringaInvertita = stringa.split("").reverse().join("")
-    return stringaInvertita
-    
+  const stringaInvertita = stringa.split("").reverse().join("");
+  return stringaInvertita;
 }
 
-reverseString("Federico")
-console.log(reverseString("Federico"))
-
+reverseString("Federico");
+console.log(reverseString("Federico"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
@@ -148,17 +141,15 @@ console.log(reverseString("Federico"))
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function upperFirst(stringa) {
-    const lettere = stringa.split("")
-    for (let index = 0; index < lettere.length; index++) {
-        lettere[index] = lettere[index].chartAt(0).toUpperCase() + lettere[index].slice(1)
-    }
-        return lettere.join("")
-
-
-        
-    }
-    // upperFirst("darth vader")
-    // console.log(upperFirst("darth vader"))
+  const lettere = stringa.split("");
+  for (let index = 0; index < lettere.length; index++) {
+    lettere[index] =
+      lettere[index].chartAt(0).toUpperCase() + lettere[index].slice(1);
+  }
+  return lettere.join("");
+}
+// upperFirst("darth vader")
+// console.log(upperFirst("darth vader"))
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
@@ -168,14 +159,12 @@ function upperFirst(stringa) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function cutString(stringa) {
-    const taglio = stringa.slice(1, -1)
-    return taglio
-    
+  const taglio = stringa.slice(1, -1);
+  return taglio;
 }
 
-cutString("Epicode")
-console.log(cutString("Epicode"))
-
+cutString("Epicode");
+console.log(cutString("Epicode"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
@@ -183,8 +172,4 @@ console.log(cutString("Epicode"))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function giveMeRandom(n) {
-    
-
-    
-}
+function giveMeRandom(n) {}
